@@ -23,4 +23,27 @@ Things you may want to cover:
 
 * ...
 
-aahoahoahoahoaa
+# gitコマンド
+## clone (DL)
+git clone *repo URL*
+
+## 編集したコードをコミットしてプッシュ
+
+### add to staging
+git add *file_name
+or
+git add .
+
+### commit
+git commit -m 'description'
+
+### push
+git push
+
+## 新しいブランチを作る
+### ブランチ作成
+git branch '*branch_name'
+
+### カレントブランチをそのブランチに変える
+git checkout '*branch_name'
+
