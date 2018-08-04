@@ -1,0 +1,2 @@
+module PrivacyPollicyHelper
+end

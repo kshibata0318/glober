@@ -49,4 +49,3 @@ git checkout '*branch_name'
 
 ### 新しいブランチをpush
 git push --set-upstream origin *branch_name
-

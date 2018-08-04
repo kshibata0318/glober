@@ -48,6 +48,12 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-stack_explorer'
+  gem 'pry-byebug'
+  gem 'hirb'
+  gem 'hirb-unicode'
 end
 
 group :test do
@@ -60,3 +66,22 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+gem 'devise'
+gem 'devise-i18n'
+gem 'mysql2'
+gem 'rails_admin'
+
+gem 'omniauth'
+gem "omniauth-facebook"
+# gem 'omniauth-google-oauth2'
+
+#環境変数
+gem 'dotenv-rails'
+
+
+# #i18-n
+gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
+
+

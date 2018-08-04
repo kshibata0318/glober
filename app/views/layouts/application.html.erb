@@ -10,6 +10,38 @@
   </head>
 
   <body>
+     <!--ヘッダー共通部分-->
+    <header>
+<div class="header_container">
+  <div class="header_menu">
+     <ul>
+      <li id="logo"><a href=""><%= image_tag("glober_logo.svg", :size =>"40x45")%></a></li>
+      <li class="menus_left"><a href="/">Home</a></li>
+      <li class="menus_left"><a href="">Feature</a></li>
+      <li class="menus_left"><a href="">About us</a></li>
+      <li class="menus_left"><a href="">Help</a></li>
+      <li class="menus_right" id="menu_right_first_child"><%=link_to("+ Create Your Own Travel Log","")%></li>
+      <li class="menus_right"><%=link_to(image_tag("search_button.svg", :size =>"28x20"),"")%></li>
+      <% if user_signed_in? %>
+      <li class="menus_right"><%=link_to(image_tag("notifications_button.svg", :size =>"28x20"),"")%></li>
+      <li class="menus_right"><%=link_to(image_tag("user_button.svg", :size =>"28x20"),"")%></li>
+       <% else %>
+      <li class="menus_right"><%= link_to "Sign up", new_user_registration_path %></li>
+      <li class="menus_right"><%= link_to image_tag("facebook.svg", :size =>"28x20"), user_facebook_omniauth_authorize_path %></li>
+      <li class="menus_right"><%= link_to "Login", new_user_session_path %></li>
+           <% end %>
+    </ul>
+    
+    
+  </div>
+</div>
+</header>
+    
+    
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
+
+
