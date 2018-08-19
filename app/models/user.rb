@@ -3,7 +3,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :timeoutable, :confirmable,:omniauthable, omniauth_providers: [:facebook]
-         
+  
+  has_many :log_entries
+  
   before_create :settle_name
   
   def settle_name

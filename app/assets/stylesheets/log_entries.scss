@@ -1,0 +1,77 @@
+// Place all the styles related to the log_entries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.log_entries{
+    border:2px solid gray;
+    margin-bottom:10px;
+    padding:10px 20px 20px 10px;
+    width:30%;
+    
+}
+
+.log_entries .header{
+    border-bottom:1px solid gray;
+    padding:10px;
+}
+
+
+.log_entries .img img{
+    width:100%;
+    margin: 5px 0 5px 0;
+    
+}
+
+
+
+#tabMenu ul{
+width:100%;
+}
+#tabMenu li{
+float:left;
+width: 33.335%;
+}
+
+
+#tabMenu li a{
+display:block;
+padding:10px;
+height:auto;
+background:	#C0C0C0;
+line-height:20px;
+text-align:center;
+border:#ccc 1px solid;
+color:white;
+text-decoration:none;
+}
+
+#tabMenu li a.active {
+background: #fff;
+color:black;
+}
+
+
+#tabBox1,#tabBox2,#tabBox3{
+width:100%;
+height:150px;
+border:#ccc 1px solid;
+}
+#tabBox1{
+}
+#tabBox2{
+display:none;
+}
+#tabBox3{
+display:none;
+}
+
+
+
+.log_entries .price{
+    padding:10px;
+}
+
+.log_entries .price p{
+    float:right;
+    font-size:19px;
+}

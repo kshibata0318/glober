@@ -1,0 +1,96 @@
+<div class="page">
+<p id="notice"><%= notice %></p>
+
+<h1>Log Entries</h1>
+
+
+<% @log_entries.each do |log_entry| %>
+  <div class="log_entries">
+      <div class="header"><%= log_entry.title  %></div>
+      <div class="img"><%= image_tag("dummy-image.jpg")%></div>
+      <ul id="tabMenu" class="clearfix">
+        <li><a href="#tabBox1" class="active" id="tab1">Scedule</a></li>
+        <li><a href="#tabBox2" id="tab2">What to see</a></li>
+        <li><a href="#tabBox3" id="tab3">Points</a></li>
+      </ul>
+      <div id="tabBoxes">
+        <div id="tabBox1">行動スケジュール</div>
+        <div id="tabBox2">何を観れるか</div>
+        <div id="tabBox3">その他ポイント</div>
+      </div>
+      <div class="price">
+        <p>$70.00</p>
+      </div>
+      
+  </div>
+    <%= link_to 'Show', log_entry %>
+    <%= link_to 'Edit', edit_log_entry_path(log_entry) %>
+    <%= link_to 'Destroy', log_entry, method: :delete, data: { confirm: 'Are you sure?' } %>
+  
+<% end %>
+  
+  
+
+<br>
+
+<%= link_to 'New Log Entry', new_log_entry_path %>
+
+
+</div>
+
+<script>
+$(function(){
+$("#tabMenu li a").on("click", function() {
+$("#tabBoxes div").hide();
+$($(this).attr("href")).fadeToggle();
+});
+return false;
+});
+</script>
+
+<script>
+$(function(){
+$("#tab1").on("click", function() {
+$("#tab1").addClass("active");
+$("#tab2").removeClass("active");
+$("#tab3").removeClass("active");
+});
+return false;
+});
+</script>
+
+
+<script>
+$(function(){
+$("#tab2").on("click", function() {
+$("#tab2").addClass("active");
+$("#tab1").removeClass("active");
+$("#tab3").removeClass("active");
+});
+return false;
+});
+</script>
+
+<script>
+$(function(){
+$("#tab3").on("click", function() {
+$("#tab3").addClass("active");
+$("#tab1").removeClass("active");
+$("#tab2").removeClass("active");
+});
+return false;
+});
+</script>
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+$("#tabMenu li a").click(function(e){
+e.preventDefault();
+});
+});
+</script>

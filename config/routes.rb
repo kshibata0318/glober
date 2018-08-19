@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
  
+ 
+  
   devise_for :users,
   path: '',
   path_names: {sign_in: 'login', sign_out: 'logout', edit: 'profile', sign_up: 'registration'},
@@ -12,11 +14,13 @@ Rails.application.routes.draw do
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
+   resources :log_entries
+  
   resources :privacy_policy, only: [:index] 
   # get 'privacy_policy', to: 'privacy_policy#index'
 
   
-  root to: "home#index"
+  root to: "log_entries#index"
   
   
 end
