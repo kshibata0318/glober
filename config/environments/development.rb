@@ -61,7 +61,7 @@ Rails.application.configure do
   
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { host: 'https://5566a0fd8bc64a60a74f15d7736a1c8d.vfs.cloud9.us-east-2.amazonaws.com/', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'https://5566a0fd8bc64a60a74f15d7736a1c8d.vfs.cloud9.us-east-2.amazonaws.com/' }
   # development.rbだと、上の２行じゃなくて下の一行
   # config.action_mailer.default_url_options = {  host: 'localhost', port: 3000 }
   config.action_mailer.delivery_method = :smtp
@@ -70,8 +70,8 @@ Rails.application.configure do
     :address => "smtp.gmail.com",
     :port => 587,
     :authentication => :plain,
-    :enable_starttls_auto => true
+    :enable_starttls_auto => true,
     :user_name => 'k.shibata.318@gmail.com',
-    :password => 'makikei8382'
+    :password => 'zujitigfrilsovmh'
   }
 end

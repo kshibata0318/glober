@@ -5,7 +5,8 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: mysql2
+  # adapter: mysql2
+  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   encoding: utf8
@@ -13,10 +14,10 @@ default: &default
 development:
   <<: *default
   database: glober_development
-  socket: /var/lib/mysql/mysql.sock
+  # socket: /var/lib/mysql/mysql.sock
   pool: 5
-  username: root
-  password:
+  username: postgres
+  password: makikei8382
   host: localhost
   
   
@@ -30,8 +31,8 @@ test:
   database: glober_test
   socket: /var/lib/mysql/mysql.sock
   pool: 5
-  username: root
-  password:
+  username: postgres
+  password: makikei8382
   host: localhost
   
 production:
